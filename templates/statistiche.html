@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162276198-1"></script>
+    <meta charset="UTF-8">
+    <title>Libri letti Home Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="static/css/home.css">
+    <link rel="stylesheet" href="static/css/myBulmaStylesMin.css">
+    <script
+      src="http://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous">
+    </script>
+</head>
+<body>
+    <div id="header_container"></div>
+    <div class="container is-fluid" >  
+      <h1 class="title is-1" style="text-align:center">Statistiche</h1>
+      <div class="tile is-ancestor">
+         <div class="tile is-vertical">
+            <div class="tile">
+                <div class="tile is-parent is-6">
+                    <article class="tile is-child notification is-warning">
+                    <p class="title">Libri letti per anno</p>
+                        <div id="libriPerAnno"></div>
+                    </article>
+                </div>
+                <div class="tile is-parent is-6">
+                    <article class="tile is-child notification is-info">
+                    <p class="title">Letture per autore</p>
+                        <div id="autoriCount"></div>
+                    </article>
+                </div>
+            </div>           
+         </div>
+      </div>
+      
+    </div>  
+</body>
+<script src="static/js/statistiche.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+</html>

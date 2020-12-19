@@ -1,0 +1,41 @@
+swagger: "2.0"
+info:
+  description: This is the swagger file that goes with our server code
+  version: "1.0.0"
+  title: yes-no detector Python WebApp
+
+basePath: "/api"
+
+# Paths supported by the server application
+paths:
+  /detector:
+    post:
+      operationId: "detector.forecast"
+      tags:
+        - "detector"
+      summary: "Submit the wav to get a forecast"
+      description: "Submit the wav to get a forecast"
+      consumes:
+        - "audio/wav"
+      produces:
+        - "application/json"
+      consumes:
+        - multipart/form-data
+      parameters:
+        - name: formData
+          in: formData   # <-----
+          description: The uploaded file data
+          required: true
+          type: file     # <-----
+      responses:
+        200:
+          description: "Successful forecast received"
+          schema:
+            type: "object"
+            properties:
+                key:
+                  type: "string"
+                value:
+                  type: "string"
+
+ 
