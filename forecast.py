@@ -12,7 +12,7 @@ model_lstm = keras.models.load_model('../output_yesno/cnn.model')
 def elaborate(formData, toplot=False):
     x=[]
     sample_rate, samples = wavfile.read(formData)
-    print("sample_rate: ",sample_rate," len(samples) ",len(samples))
+    #print("sample_rate: ",sample_rate," len(samples) ",len(samples))
     samples = getCentered1Sec(filename="fromWeb", samples=samples, sample_rate=sample_rate)
 
     freqs, times, specgram = log_specgram(samples, sample_rate=sample_rate)
