@@ -7,7 +7,7 @@ import keras
 
 L = 48000
 new_sample_rate = 8000
-model_lstm = keras.models.load_model('../output_yesno/cnn.model')
+model_lstm = keras.models.load_model('cnn.model')
 
 def elaborate(formData, toplot=False):
     x=[]
