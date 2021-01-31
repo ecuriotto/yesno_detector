@@ -1,10 +1,11 @@
 # Function dependencies, for example:
 # package>=version
 Flask
+Flask_Cors
+connexion
 numpy
 scipy
 pandas
-tensorflow
 keras
 google-cloud-storage
 gcsfs
