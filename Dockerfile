@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 
-MAINTANER Your Name "youremail@domain.tld"
+LABEL "email"="youremail@domain.tld"
 
 RUN apt-get update -y && \
     apt-get install -y python-pip python-dev
