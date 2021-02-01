@@ -11,3 +11,4 @@ google-cloud-storage
 gcsfs
 h5py==2.10.0
 chardet==3.0.4
+tensorflow

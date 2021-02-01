@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM python:3.8
 
 LABEL "email"="youremail@domain.tld"
 
