@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: yesno-deploy
+  labels:
+    name: yesno-deploy
+    app: yesno-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      name: yesno-pod
+      app: yesno-app
+  template:
+    metadata:
+      name: yesno-pod
+      labels:
+        name: yesno-pod
+        app: yesno-app
+    spec:
+      containers:
+        - name: voting-app
+          image: ecuriottodocker/yesno-repo:latest
+          ports:
+            - containerPort: 5000

@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: yesno-service
+  labels:
+    name: yesno-service
+    app: yesno-app
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 5000
+      targetPort: 5000
+  selector:
+    name: yesno-pod
+    app: yesno-app
