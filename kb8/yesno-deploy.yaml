@@ -19,7 +19,7 @@ spec:
         app: yesno-app
     spec:
       containers:
-        - name: voting-app
+        - name: yesno-app
           image: ecuriottodocker/yesno-repo:latest
           ports:
             - containerPort: 5000
